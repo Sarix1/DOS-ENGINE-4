@@ -1,0 +1,664 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       23/12/16 15:39:03
+Warning! W1027: file commands_game.obj(C:\Dev\DOS-ENGINE\src\commands_game.c): redefinition of fixpStr_ ignored
+Warning! W1027: file game.obj(C:\Dev\DOS-ENGINE\src\game.c): redefinition of fixpStr_ ignored
+Warning! W1027: file game_physics.obj(C:\Dev\DOS-ENGINE\src\game_physics.c): redefinition of fixpStr_ ignored
+Warning! W1027: file gfx_bitmap.obj(C:\Dev\DOS-ENGINE\src\gfx_bitmap.c): redefinition of fixpStr_ ignored
+Warning! W1027: file gfx_draw.obj(C:\Dev\DOS-ENGINE\src\gfx_draw.c): redefinition of fixpStr_ ignored
+Warning! W1027: file gfx_draw_game.obj(C:\Dev\DOS-ENGINE\src\gfx_draw_game.c): redefinition of fixpStr_ ignored
+Warning! W1027: file gfx_draw_text.obj(C:\Dev\DOS-ENGINE\src\gfx_draw_text.c): redefinition of fixpStr_ ignored
+Warning! W1027: file gfx_palette.obj(C:\Dev\DOS-ENGINE\src\gfx_palette.c): redefinition of fixpStr_ ignored
+Warning! W1027: file math_fixp.obj(C:\Dev\DOS-ENGINE\src\math_fixp.c): redefinition of fixpStr_ ignored
+Warning! W1027: file timer.obj(C:\Dev\DOS-ENGINE\src\timer.c): redefinition of fixpStr_ ignored
+Executable Image: engine.exe
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0003:00000000        00012950
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:00000000   00000010
+_TEXT                  CODE           AUTO           0001:00000010   00012603
+_bit_reverse13_DATA    FAR_DATA       AUTO           0002:00000000   00000100
+action13_DATA          FAR_DATA       AUTO           0002:00000100   00001000
+console13_DATA         FAR_DATA       AUTO           0002:00001100   00000800
+gfx_draw_text13_DATA   FAR_DATA       AUTO           0002:00001900   00000800
+input_keys13_DATA      FAR_DATA       AUTO           0002:00002100   00000180
+math_fixp_tables13_DATA FAR_DATA      AUTO           0002:00002280   00001000
+text_input13_DATA      FAR_DATA       AUTO           0002:00003280   00000100
+_NULL                  BEGDATA        DGROUP         0003:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0003:00000004   00000000
+CONST                  DATA           DGROUP         0003:00000004   000006a8
+CONST2                 DATA           DGROUP         0003:000006ac   00000118
+_DATA                  DATA           DGROUP         0003:000007c4   00001c5c
+XIB                    DATA           DGROUP         0003:00002420   00000000
+XI                     DATA           DGROUP         0003:00002420   00000018
+XIE                    DATA           DGROUP         0003:00002438   00000000
+YIB                    DATA           DGROUP         0003:00002438   00000000
+YI                     DATA           DGROUP         0003:00002438   00000012
+YIE                    DATA           DGROUP         0003:0000244a   00000000
+TIB                    DATA           DGROUP         0003:0000244a   00000000
+TI                     DATA           DGROUP         0003:0000244a   00000000
+TIE                    DATA           DGROUP         0003:0000244a   00000000
+DATA                   DATA           DGROUP         0003:0000244a   00000000
+_BSS                   BSS            DGROUP         0003:0000244c   000004fa
+STACK                  STACK          DGROUP         0003:00002950   00010000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: _bit_reverse.obj(C:\Dev\DOS-ENGINE\src\_bit_reverse.c)
+0001:00000010  reverse_byte_
+Module: _debug.obj(C:\Dev\DOS-ENGINE\src\_debug.c)
+0001:00000044+ fixpStr_
+0001:000000b9  updateStats_
+0001:0000012d  drawDebug_
+0003:0000244c  _debug
+Module: _dpmi.obj(C:\Dev\DOS-ENGINE\src\_dpmi.c)
+0001:000001a5* dpmi_unlock_region_
+0001:0000023f  dpmi_lock_region_
+Module: _status.obj(C:\Dev\DOS-ENGINE\src\_status.c)
+0003:000007c8  _error_strings
+Module: _string.obj(C:\Dev\DOS-ENGINE\src\_string.c)
+0001:0000034a  strcmptok_
+Module: action.obj(C:\Dev\DOS-ENGINE\src\action.c)
+0001:000004a6  generateAction_
+0001:0000052c  processActions_
+0003:0000265c  _local_controldata
+Module: audio.obj(C:\Dev\DOS-ENGINE\src\audio.c)
+0001:0000059a  initAudio_
+0001:000005c5  quitAudio_
+Module: command.obj(C:\Dev\DOS-ENGINE\src\command.c)
+0001:000005f8  execCommand_
+0001:00000756  parseCommand_
+0003:0000080c+ _command_strings
+0003:000008f0+ _command_functions
+Module: commands_game.obj(C:\Dev\DOS-ENGINE\src\commands_game.c)
+0001:00000846  cmdSpawn_
+Module: commands_system.obj(C:\Dev\DOS-ENGINE\src\commands_system.c)
+0001:000008ba  cmdQuit_
+0001:000008e2  cmdStartGame_
+Module: commands_timer.obj(C:\Dev\DOS-ENGINE\src\commands_timer.c)
+0001:00000914  cmdSetActionDelay_
+0001:00000940* cmdGetActionDelay_
+Module: console.obj(C:\Dev\DOS-ENGINE\src\console.c)
+0001:00000979  consoleInit_
+0001:000009ae  consoleQuit_
+0001:000009d9  consoleEnter_
+0001:00000a21  consoleLeave_
+0001:00000a55  consoleUpdate_
+0001:00000a76  consoleEsc_
+0001:00000a9e  v_consoleWrite_f_
+0001:00000b81* consoleWrite_f_
+0001:00000bc3+ consoleInput_
+0001:00000c5a  consoleDraw_
+Module: game.obj(C:\Dev\DOS-ENGINE\src\game.c)
+0001:00000d23  gameInit_
+0001:000012e0  gameQuit_
+0001:00001331  gameEnter_
+0001:00001360  gameLeave_
+0001:00001388  gameUpdate_
+0001:000013cf  gameEsc_
+0001:00001484+ createObject_
+0001:000015d8+ deleteObject_
+0001:000016a5* deleteLastObject_
+0001:000016df  spawnShip_
+0003:000009cc  _g_Game
+Module: game_pause.obj(C:\Dev\DOS-ENGINE\src\game_pause.c)
+0001:000017c8  togglePause_
+0001:00001825  pauseInit_
+0001:00001866  pauseQuit_
+0001:000018b7  pauseEsc_
+Module: game_physics.obj(C:\Dev\DOS-ENGINE\src\game_physics.c)
+0001:00001957+ controlObject_
+0001:00001c59+ moveObject_
+0001:00001d7c+ moveAllObjects_
+0001:00001dcb* polyCircleIntersect_
+0001:00001e01+ intersectAABB_
+0001:00001e80+ intersectOBB_
+0001:00002a72+ intersectAll_
+0001:00002c87  physics_
+Module: gfx_bitmap.obj(C:\Dev\DOS-ENGINE\src\gfx_bitmap.c)
+0001:00002d63+ fskip_
+0001:00002da7+ loadBitmap_
+0001:00003016+ freeBitmap_
+0001:0000304c+ drawBitmap_
+0001:000030f4* convertFont8x8_
+Module: gfx_draw.obj(C:\Dev\DOS-ENGINE\src\gfx_draw.c)
+0001:00003408* drawPixels_fast_
+0001:00003497+ drawPixels_
+0001:000035e3* drawLineHorz_
+0001:000036a7* drawLineVert_
+0001:00003771+ drawLineHorz2_
+0001:00003844+ drawLineVert2_
+0001:0000391d+ drawLineSlope_
+0001:00003b0d+ drawLine_
+0001:00003c5d* drawLine_fast_
+0001:00003d99  drawLineFixp_
+0001:00003e70* drawLineFixp_fast_
+0001:00003f37  drawRectFill_fast_
+0001:00003fb6* drawRectFill_
+0001:000040b6  drawRectFrame_
+0001:000042ed* drawRectFrame_fast_
+0001:000043db  drawRectFrameRotated_v_
+0001:00004a43* drawCircleFill_
+0001:00004bca* drawCircleFrame_
+0001:00004dce* drawSprite_
+0001:00004e73* drawShape_
+0001:00004fce* drawFixpShape_
+0001:00005129  drawShapeAspect_
+Module: gfx_draw_game.obj(C:\Dev\DOS-ENGINE\src\gfx_draw_game.c)
+0001:00005345+ drawHitBoxAABB_
+0001:00005454+ drawHitBoxOBB_
+0001:000054ff+ drawObject_
+0001:00005615+ drawAllObjects_
+0001:000057da  gameDraw_
+Module: gfx_draw_text.obj(C:\Dev\DOS-ENGINE\src\gfx_draw_text.c)
+0001:00005875* setFont_
+0001:000058cd+ drawChar8x8_
+0001:000059b3* drawCharSet_
+0001:00005a39  drawText_
+0001:00005bdf+ drawText_len_
+0001:00005c30+ drawText_null_
+0001:00005c7d+ drawLogLine_
+0001:00005d76  drawLog_
+0001:00005f78  drawInput_
+0001:00006050  pauseDraw_
+Module: gfx_palette.obj(C:\Dev\DOS-ENGINE\src\gfx_palette.c)
+0001:000060ff* setVGAPalette_
+0001:00006194+ getVGAPalette_
+0001:0000622c+ setVGAPaletteColor_RGB_
+0001:00006294* setVGAPaletteColor_
+0001:000062cf* getPaletteColor_VGA_
+0001:00006347* setPaletteColor_RGB_
+0001:0000639f* setPaletteColor_
+0001:000063d6* getPaletteColor_
+0001:00006418* scalePalette_
+0001:000064b9* setWholePalette_
+0001:00006524* fadeToBlack_
+0001:000065e6* fadeFromBlack_
+0001:000066a8* rotatePaletteLeft_
+0001:00006712* rotatePaletteRight_
+0001:0000677a+ rotatePaletteLeftBy_
+0001:00006830* rotatePalette_
+0001:0000688d* findNearest_
+0001:000069ff* buildGradient_
+Module: gfx_poly.obj(C:\Dev\DOS-ENGINE\src\gfx_poly.c)
+0001:00006bfd  getPoly_
+Module: gfx_video.obj(C:\Dev\DOS-ENGINE\src\gfx_video.c)
+0001:00006c91  initVideo_
+0001:00006d33  quitVideo_
+0001:00006d96  render_
+0003:00000b78  _g_Video
+Module: input.obj(C:\Dev\DOS-ENGINE\src\input.c)
+0001:00006dfd+ initKeyMap_
+0001:00006e3a+ printScreen_
+0001:00006e5d+ handleGlobalKeys_
+0001:00006eff+ handleGameControl_
+0001:00006f98+ drainScanBuffer_
+0001:00007003  handleInputEvents_
+0001:000074e0  initInput_
+0001:00007526  quitInput_
+0003:00000bac  _g_Input
+0003:000018c0+ _KeyMap_Basic
+Module: input_keys.obj(C:\Dev\DOS-ENGINE\src\input_keys.c)
+0003:000019c4+ _key_names
+0002:00002100  _ascii
+0002:00002180  _ascii_shifted
+0002:00002200  _ascii_special
+Module: main.obj(C:\Dev\DOS-ENGINE\src\main.c)
+0001:00007556  main_
+Module: math_fixp.obj(C:\Dev\DOS-ENGINE\src\math_fixp.c)
+0001:000076a4* sqrt_
+0001:00007723* sqrtI2F_
+0001:000077af* sqrtF2F_
+0001:00007831  fixpSin_
+0001:000078ae  fixpSinAcos_
+0001:000078ec* vec2rot_
+0001:000079fd* vec2rotV_
+0001:00007afd* vecs2rot_
+0001:00007c3d* vecs2rotV_
+0001:00007d6d* vecs2scale_
+0001:00007e58+ vec2scaleRot_
+0001:00007fa7+ vec2scaleRot_safe_
+0001:00008126+ vec2scaleRotV_
+0001:0000825a+ vec2scaleRotV_safe_
+0001:000083c6* vecs2scaleRot_
+0001:00008433* vecs2scaleRot_safe_
+0001:000084a0  vecs2scaleRotV_
+0001:00008516* vecs2scaleRotV_safe_
+0001:0000858c* vec2proj_
+0001:000086c5+ vec2projOff_
+0001:0000880a* intersectLineLine_
+0001:00008a0a* fixpIntersectLineLine_
+0001:00008c58* intersectSegSeg_
+0001:00009049* fixpIntersectSegSeg_
+0001:0000947c* intersectLineSeg_
+0001:0000979b* fixpIntersectLineSeg_
+0001:00009aec* intersectRaySeg_
+0001:00009e71* fixpIntersectRaySeg_
+0001:0000a242* intersectRayLine_
+0001:0000a4f2* fixpIntersectRayLine_
+0001:0000a7e4* intersectRayRay_
+0001:0000aafa* fixpIntersectRayRay_
+0001:0000ae52* intersectLineCircle_
+0001:0000af52* intersectRayCircle_
+0001:0000af75* intersectSegCircle_
+0001:0000af98+ pointInScreen_
+0001:0000affc  clipLineToScreen_
+Module: math_fixp_tables.obj(C:\Dev\DOS-ENGINE\src\math_fixp_tables.c)
+0002:00002280  _SinTable
+0002:00002a80  _SinAcosTable
+Module: state.obj(C:\Dev\DOS-ENGINE\src\state.c)
+0001:0000b20f  initStateMgr_
+0001:0000b23a  quitStateMgr_
+0001:0000b265* getState_
+0001:0000b29d  getTopState_
+0001:0000b2e4  moveStateToTop_
+0001:0000b38b  pushState_
+0001:0000b44e  popState_
+0001:0000b4ae  removeState_
+0001:0000b57f  updateStates_
+0001:0000b5db  drawStates_
+0001:0000b637  setStateFlags_
+0001:0000b66d  clearStateFlags_
+0001:0000b6a5  getStateFlags_
+0001:0000b6dd  toggleConsole_
+0003:00001fc4+ _g_StateMgr
+0003:00001fd8+ _States
+Module: system.obj(C:\Dev\DOS-ENGINE\src\system.c)
+0003:00002038  _g_System
+0003:0000203e+ _subsys_strings
+0001:0000b8fc  init_
+0001:0000ba67  quit_
+Module: text_input.obj(C:\Dev\DOS-ENGINE\src\text_input.c)
+0001:0000bad3* initRingBuf_
+0001:0000bb41  logWrite_
+0001:0000bf88  v_logWrite_f_
+0001:0000c06a* logWrite_f_
+0001:0000c0aa  resetInput_
+0001:0000c0f4  handleTextInput_
+0002:00003280  _format_buffer
+Module: text_output.obj(C:\Dev\DOS-ENGINE\src\text_output.c)
+0001:0000c45a* setTextColor_
+0001:0000c499  print_
+0001:0000c4f1  setPrintFlags_
+0001:0000c51f  clearPrintFlags_
+0001:0000c54f  printStatus_
+Module: timer.obj(C:\Dev\DOS-ENGINE\src\timer.c)
+0003:00002084  _g_Timer
+0001:0000c7f3  quitTimer_
+0001:0000c843  initTimer_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(stk)
+0001:0000c96b* __STK
+0001:0000c958  __CHK
+0001:0000c968* __GRO
+0001:0000c989* __STKOVERFLOW_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(sprintf.c)
+0001:0000c9a0  sprintf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(memset.c)
+0001:0000c9d0  memset_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(int386.c)
+0001:0000c9f0  int386_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(iob.c)
+0003:00002124  ___iob
+0003:0000232c  __fmode
+0003:00002814  ___OpenStreams
+0003:00002818  ___ClosedStreams
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fprintf.c)
+0001:0000ca10  fprintf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(exit.c)
+0001:0000ca31+ __null_int23_exit_
+0001:0000ca32  exit_
+0001:0000ca5e* _exit_
+0003:00002330+ ___int23_exit
+0003:00002334+ ___FPE_handler_exit
+Module: C:\WATCOM/lib386/dos\clib3r.lib(sscanf.c)
+0001:0000cac0+ vsscanf_
+0001:0000caf0  sscanf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(snprintf.c)
+0001:0000cb60  vsnprintf_
+0001:0000cbc0* snprintf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nmalloc.c)
+0001:0000cbf0  _nmalloc_
+0001:0000cbf0  malloc_
+0003:00002338  ___nheapbeg
+0003:0000233c  ___MiniHeapRover
+0003:00002340  ___LargestSizeB4MiniHeapRover
+Module: C:\WATCOM/lib386/dos\clib3r.lib(calloc.c)
+0001:0000ccf0  calloc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nfree.c)
+0001:0000cd10  _nfree_
+0001:0000cd10  free_
+0003:0000281c  ___MiniHeapFreeRover
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nrealloc.c)
+0001:0000ce10* _nrealloc_
+0001:0000ce10  realloc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(memcpy.c)
+0001:0000ceb0  memcpy_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(i8m)
+0001:0000ced8  __I8M
+0001:0000ced8  __U8M
+Module: C:\WATCOM/lib386/dos\clib3r.lib(i8s)
+0001:0000cef4  __U8RS
+0001:0000cf0e  __I8RS
+0001:0000cf29* __I8LS
+0001:0000cf29* __U8LS
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fgetc.c)
+0001:0000cf50  __fill_buffer_
+0001:0000d050  fgetc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fopen.c)
+0001:0000d0f0+ __open_flags_
+0001:0000d2f0+ _fsopen_
+0001:0000d340  fopen_
+0001:0000d3c0* freopen_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fclose.c)
+0001:0000d420  __doclose_
+0001:0000d4a0  __shutdown_stream_
+0001:0000d4c0  fclose_
+0003:00002820+ ___RmTmpFileFn
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fread.c)
+0001:0000d4f0  fread_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(delay.c)
+0001:0000d6c0  delay_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fputc.c)
+0001:0000d7b0  fputc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(outp.c)
+0001:0000d870  outp_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(inp.c)
+0001:0000d880  inp_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(cstart)
+0001:00000003* ___begtext
+0003:00000000* __nullarea
+0003:00002344* __D16Infoseg
+0003:00002346  __x386_zero_base_selector
+0001:0000d888  _cstart_
+0001:0000dad6  __exit_
+0001:0000dad8  __do_exit_with_msg__
+0001:0000db20  __GETDS
+0001:0000db20  ___GETDSStart_
+0001:0000db2b  ___GETDSEnd_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(d_getvec.c)
+0001:0000db30  _dos_getvect_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(d_setvec.c)
+0001:0000db70  _dos_setvect_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(i8d)
+0001:0000db9c  __I8D
+0001:0000dbf1* __U8D
+Module: C:\WATCOM/lib386/dos\clib3r.lib(strlen.c)
+0001:0000dc80  strlen_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(printf.c)
+0001:0000dca0  printf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(xmsg.c)
+0001:0000dcd0* __exit_with_msg_
+0001:0000dce0  __fatal_runtime_error_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(crwdata)
+0003:00002383  __osmajor
+0003:00002384  __osminor
+0003:00002358  __psp
+0003:0000237a  __Extender
+0003:0000237b  __ExtenderSubtype
+0003:0000237c  __X32VM
+0003:0000235c* __x386_stacklow
+0003:00002350  __LpCmdLine
+0003:00002354  __LpPgmName
+0003:00002348  __dynend
+0003:0000234c  __curbrk
+0003:0000235c  __STACKLOW
+0003:00002360  __STACKTOP
+0003:00002364  __ASTACKSIZ
+0003:00002368  __ASTACKPTR
+0003:0000236c  __cbyte
+0003:00002370* __cbyte2
+0003:00002374  __child
+0003:0000237d  __Envptr
+0003:00002381  __Envseg
+0003:00002378  __no87
+0003:00002385  ___FPE_handler
+Module: C:\WATCOM/lib386/dos\clib3r.lib(vsprintf.c)
+0001:0000dd30  vsprintf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(__stos)
+0001:0000dd50  __STOSB
+0001:0000dd87* __STOSD
+Module: C:\WATCOM/lib386/dos\clib3r.lib(segread.c)
+0001:0000de00  segread_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(intx386.c)
+0001:0000de30  int386x_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(initfile.c)
+0001:0000de50  __InitFiles_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(ioexit.c)
+0001:0000df50* fcloseall_
+0001:0000df60  __full_io_exit_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fprtf.c)
+0001:0000df90  __fprtf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(initrtns.c)
+0001:0000e040  __InitRtns
+0001:0000e090  __FiniRtns
+Module: C:\WATCOM/lib386/dos\clib3r.lib(scnf.c)
+0001:0000ee10  __scnf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(prtf.c)
+0001:0000f080  __prtf_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nmemneed.c)
+0001:0000fef0  __nmemneed_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(mem.c)
+0001:0000ff00  __MemAllocator
+0001:0000ffb0  __MemFree
+Module: C:\WATCOM/lib386/dos\clib3r.lib(grownear.c)
+0001:00010170+ __FreeDPMIBlocks_
+0001:000101e0  __ReAllocDPMIBlock_
+0001:00010370+ __LastFree_
+0001:000105e0  __ExpandDGROUP_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nmsize.c)
+0001:00010730  _nmsize_
+0001:00010730* _msize_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(nexpand.c)
+0001:00010740  _nexpand_
+0001:00010740* _expand_
+0001:000107b0+ __HeapManager_expand_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(flushall.c)
+0001:00010980  __flushall_
+0001:000109c0* flushall_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(gtche.c)
+0001:000109d0  getche_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(ioalloc.c)
+0001:000109f0  __ioalloc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(qread.c)
+0001:00010a90  __qread_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(seterrno.c)
+0001:00010ab1  __set_errno_
+0001:00010abd* __set_EDOM_
+0001:00010ac9* __set_ERANGE_
+0001:00010ad5* __set_EINVAL_
+0001:00010ae6  __set_doserrno_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(comtflag.c)
+0001:00010b00* __set_commode_
+0003:0000238c  __commode
+Module: C:\WATCOM/lib386/dos\clib3r.lib(tolower.c)
+0001:00010b10  tolower_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(open.c)
+0001:00010d60* open_
+0001:00010d80  sopen_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fseek.c)
+0001:00010e00  fseek_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(chktty.c)
+0001:00010f00  __chktty_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(freefp.c)
+0001:00010f40  __freefp_
+0001:00010f80  __purgefp_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(allocfp.c)
+0001:00010fb0  __allocfp_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(__lseek.c)
+0001:00011070  __lseek_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(_clse.c)
+0001:000110c0  __close_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(flush.c)
+0001:00011110  __flush_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(cmain386.c)
+0001:00011200  __CMain
+Module: C:\WATCOM/lib386/dos\clib3r.lib(dosseg)
+0000:00001234  __DOSseg__
+Module: C:\WATCOM/lib386/dos\clib3r.lib(uselfn.c)
+0003:00002390  ___uselfn
+Module: C:\WATCOM/lib386/dos\clib3r.lib(enterdb.c)
+0001:00011240  __EnterWVIDEO_
+0003:00002394+ ___WD_Present
+Module: C:\WATCOM/lib386/dos\clib3r.lib(int386xa)
+0001:00011268  __int386x_
+0001:000112c4* _DoINTR_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(sgdef086)
+0003:00002420  __Start_XI
+0003:00002438  __End_XI
+0003:00002438  __Start_YI
+0003:0000244a  __End_YI
+Module: C:\WATCOM/lib386/dos\clib3r.lib(istable.c)
+0003:000006b8  __IsTable
+Module: C:\WATCOM/lib386/dos\clib3r.lib(mbisdbcs.c)
+0003:00002824  ___IsDBCS
+Module: C:\WATCOM/lib386/dos\clib3r.lib(mbislead.c)
+0001:00011650* _ismbblead_
+0003:00002828  ___MBCSIsTable
+Module: C:\WATCOM/lib386/dos\clib3r.lib(mbtowc.c)
+0001:00011670  mbtowc_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(bits.c)
+0003:000007bc  __Bits
+Module: C:\WATCOM/lib386/dos\clib3r.lib(noefgfmt.c)
+0003:00002398  ___EFG_printf
+0003:0000239c  ___EFG_scanf
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fdfs386)
+0001:00011744  __FDFS
+Module: C:\WATCOM/lib386/dos\clib3r.lib(wctomb.c)
+0001:00011790  wctomb_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(itoa.c)
+0001:000117c0+ utoa_
+0001:00011810  itoa_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(strupr.c)
+0001:00011840  strupr_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(lltoa.c)
+0001:00011860  ulltoa_
+0001:000118d0* lltoa_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(ltoa.c)
+0001:00011900  ultoa_
+0001:00011950* ltoa_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(heapen.c)
+0001:00011980* _heapenable_
+0003:000023a0  ___heap_enabled
+Module: C:\WATCOM/lib386/dos\clib3r.lib(minreal.c)
+0003:0000292c  ___minreal
+Module: C:\WATCOM/lib386/dos\clib3r.lib(amblksiz.c)
+0003:000023a4  __amblksiz
+Module: C:\WATCOM/lib386/dos\clib3r.lib(sbrk386.c)
+0001:00011990* sbrk_
+0001:00011a70  __brk_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(dosret.c)
+0001:00011b90  _dosretax_
+0001:00011ba0* _dosret0_
+0001:00011bb0  __set_errno_dos_
+0001:00011c30* __set_errno_dos_reterr_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(errno.c)
+0001:00011c40  __get_errno_ptr_
+0001:00011c50  __get_doserrno_ptr_
+0003:00002930+ _errno
+0003:00002934+ __doserrno
+Module: C:\WATCOM/lib386/dos\clib3r.lib(opendos.c)
+0001:00011c60  _dos_open_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(iomode.c)
+0001:00011c80  __GetIOMode_
+0001:00011ca0  __SetIOMode_nogrow_
+0003:000023bc  ___NFiles
+0003:000023c0  ___init_mode
+0003:00002410  ___io_mode
+Module: C:\WATCOM/lib386/dos\clib3r.lib(isatt.c)
+0001:00011cc0  isatty_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(umaskval.c)
+0003:00002414  ___umaskval
+Module: C:\WATCOM/lib386/dos\clib3r.lib(creatdos.c)
+0001:00011ce0  _dos_creat_
+0001:00011d00* _dos_creatnew_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(stiomode.c)
+0001:00011d20+ __grow_iomode_
+0001:00011de0+ __shrink_iomode_
+0001:00011e10  __SetIOMode_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(lseek.c)
+0001:00011e80  lseek_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(tell.c)
+0001:00011eb0  tell_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(qwrit.c)
+0001:00011ed0  __qwrite_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(fsync.c)
+0001:00011f50  fsync_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(cinit.c)
+0001:00011f60  __CommonInit_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(___argc.c)
+0003:0000293c  ____Argc
+0003:00002940  ____Argv
+Module: C:\WATCOM/lib386/dos\clib3r.lib(mbinit.c)
+0001:00011ffa  __mbinit_
+0001:000120cb+ dos_get_dbcs_lead_table_
+0001:000121bf+ dos_get_code_page_
+0003:00002418+ ___MBCodePage
+Module: C:\WATCOM/lib386/dos\clib3r.lib(alphabet.c)
+0003:00000634  ___Alphabet
+Module: C:\WATCOM/lib386/dos\clib3r.lib(doserror)
+0001:00012360  __doserror_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(iomodtty.c)
+0001:00012380  __ChkTTYIOMode_
+0001:000123c0* __IOMode_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(filedos.c)
+0001:000123e0* _dos_close_
+0001:000123f0  _dos_commit_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(dpmihost.c)
+0001:00012400  __DPMI_hosted_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(intdx386.c)
+0001:000124a0  intdosx_
+Module: C:\WATCOM/lib386/dos\clib3r.lib(inirmsel.c)
+0003:00002944  __ExtenderRealModeSelector
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM/lib386/dos\clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00010000 (65536.)
+Memory size:  000282e3 (164579.)
+Entry point address: 0001:0000d888
+Link time: 00:00.62
