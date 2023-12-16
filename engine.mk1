@@ -1,0 +1,283 @@
+!define BLANK ""
+C:\Dev\DOS-ENGINE\src\_bit_reverse.obj : C:\Dev\DOS-ENGINE\src\_bit_reverse.&
+c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 _bit_reverse.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -f&
+o=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\_debug.obj : C:\Dev\DOS-ENGINE\src\_debug.c .AUTODEPEN&
+D
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 _debug.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj&
+ -mf
+
+C:\Dev\DOS-ENGINE\src\_dpmi.obj : C:\Dev\DOS-ENGINE\src\_dpmi.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 _dpmi.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj &
+-mf
+
+C:\Dev\DOS-ENGINE\src\_status.obj : C:\Dev\DOS-ENGINE\src\_status.c .AUTODEP&
+END
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 _status.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.ob&
+j -mf
+
+C:\Dev\DOS-ENGINE\src\_string.obj : C:\Dev\DOS-ENGINE\src\_string.c .AUTODEP&
+END
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 _string.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.ob&
+j -mf
+
+C:\Dev\DOS-ENGINE\src\action.obj : C:\Dev\DOS-ENGINE\src\action.c .AUTODEPEN&
+D
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 action.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj&
+ -mf
+
+C:\Dev\DOS-ENGINE\src\audio.obj : C:\Dev\DOS-ENGINE\src\audio.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 audio.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj &
+-mf
+
+C:\Dev\DOS-ENGINE\src\command.obj : C:\Dev\DOS-ENGINE\src\command.c .AUTODEP&
+END
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 command.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.ob&
+j -mf
+
+C:\Dev\DOS-ENGINE\src\commands_game.obj : C:\Dev\DOS-ENGINE\src\commands_gam&
+e.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 commands_game.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -&
+fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\commands_system.obj : C:\Dev\DOS-ENGINE\src\commands_s&
+ystem.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 commands_system.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos&
+ -fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\commands_timer.obj : C:\Dev\DOS-ENGINE\src\commands_ti&
+mer.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 commands_timer.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos &
+-fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\console.obj : C:\Dev\DOS-ENGINE\src\console.c .AUTODEP&
+END
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 console.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.ob&
+j -mf
+
+C:\Dev\DOS-ENGINE\src\game.obj : C:\Dev\DOS-ENGINE\src\game.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 game.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj -&
+mf
+
+C:\Dev\DOS-ENGINE\src\game_pause.obj : C:\Dev\DOS-ENGINE\src\game_pause.c .A&
+UTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 game_pause.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=&
+.obj -mf
+
+C:\Dev\DOS-ENGINE\src\game_physics.obj : C:\Dev\DOS-ENGINE\src\game_physics.&
+c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 game_physics.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -f&
+o=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_bitmap.obj : C:\Dev\DOS-ENGINE\src\gfx_bitmap.c .A&
+UTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_bitmap.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=&
+.obj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_draw.obj : C:\Dev\DOS-ENGINE\src\gfx_draw.c .AUTOD&
+EPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_draw.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.o&
+bj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_draw_game.obj : C:\Dev\DOS-ENGINE\src\gfx_draw_gam&
+e.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_draw_game.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -&
+fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_draw_text.obj : C:\Dev\DOS-ENGINE\src\gfx_draw_tex&
+t.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_draw_text.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -&
+fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_palette.obj : C:\Dev\DOS-ENGINE\src\gfx_palette.c &
+.AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_palette.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo&
+=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_poly.obj : C:\Dev\DOS-ENGINE\src\gfx_poly.c .AUTOD&
+EPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_poly.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.o&
+bj -mf
+
+C:\Dev\DOS-ENGINE\src\gfx_video.obj : C:\Dev\DOS-ENGINE\src\gfx_video.c .AUT&
+ODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 gfx_video.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.&
+obj -mf
+
+C:\Dev\DOS-ENGINE\src\input.obj : C:\Dev\DOS-ENGINE\src\input.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 input.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj &
+-mf
+
+C:\Dev\DOS-ENGINE\src\input_keys.obj : C:\Dev\DOS-ENGINE\src\input_keys.c .A&
+UTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 input_keys.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=&
+.obj -mf
+
+C:\Dev\DOS-ENGINE\src\main.obj : C:\Dev\DOS-ENGINE\src\main.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 main.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj -&
+mf
+
+C:\Dev\DOS-ENGINE\src\math_fixp.obj : C:\Dev\DOS-ENGINE\src\math_fixp.c .AUT&
+ODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 math_fixp.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.&
+obj -mf
+
+C:\Dev\DOS-ENGINE\src\math_fixp_tables.obj : C:\Dev\DOS-ENGINE\src\math_fixp&
+_tables.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 math_fixp_tables.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=do&
+s -fo=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\menu.obj : C:\Dev\DOS-ENGINE\src\menu.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 menu.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj -&
+mf
+
+C:\Dev\DOS-ENGINE\src\state.obj : C:\Dev\DOS-ENGINE\src\state.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 state.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj &
+-mf
+
+C:\Dev\DOS-ENGINE\src\system.obj : C:\Dev\DOS-ENGINE\src\system.c .AUTODEPEN&
+D
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 system.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj&
+ -mf
+
+C:\Dev\DOS-ENGINE\src\text_input.obj : C:\Dev\DOS-ENGINE\src\text_input.c .A&
+UTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 text_input.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=&
+.obj -mf
+
+C:\Dev\DOS-ENGINE\src\text_output.obj : C:\Dev\DOS-ENGINE\src\text_output.c &
+.AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 text_output.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo&
+=.obj -mf
+
+C:\Dev\DOS-ENGINE\src\timer.obj : C:\Dev\DOS-ENGINE\src\timer.c .AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ *wcc386 timer.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj &
+-mf
+
+C:\Dev\DOS-ENGINE\src\engine.exe : C:\Dev\DOS-ENGINE\src\_bit_reverse.obj C:&
+\Dev\DOS-ENGINE\src\_debug.obj C:\Dev\DOS-ENGINE\src\_dpmi.obj C:\Dev\DOS-EN&
+GINE\src\_status.obj C:\Dev\DOS-ENGINE\src\_string.obj C:\Dev\DOS-ENGINE\src&
+\action.obj C:\Dev\DOS-ENGINE\src\audio.obj C:\Dev\DOS-ENGINE\src\command.ob&
+j C:\Dev\DOS-ENGINE\src\commands_game.obj C:\Dev\DOS-ENGINE\src\commands_sys&
+tem.obj C:\Dev\DOS-ENGINE\src\commands_timer.obj C:\Dev\DOS-ENGINE\src\conso&
+le.obj C:\Dev\DOS-ENGINE\src\game.obj C:\Dev\DOS-ENGINE\src\game_pause.obj C&
+:\Dev\DOS-ENGINE\src\game_physics.obj C:\Dev\DOS-ENGINE\src\gfx_bitmap.obj C&
+:\Dev\DOS-ENGINE\src\gfx_draw.obj C:\Dev\DOS-ENGINE\src\gfx_draw_game.obj C:&
+\Dev\DOS-ENGINE\src\gfx_draw_text.obj C:\Dev\DOS-ENGINE\src\gfx_palette.obj &
+C:\Dev\DOS-ENGINE\src\gfx_poly.obj C:\Dev\DOS-ENGINE\src\gfx_video.obj C:\De&
+v\DOS-ENGINE\src\input.obj C:\Dev\DOS-ENGINE\src\input_keys.obj C:\Dev\DOS-E&
+NGINE\src\main.obj C:\Dev\DOS-ENGINE\src\math_fixp.obj C:\Dev\DOS-ENGINE\src&
+\math_fixp_tables.obj C:\Dev\DOS-ENGINE\src\menu.obj C:\Dev\DOS-ENGINE\src\s&
+tate.obj C:\Dev\DOS-ENGINE\src\system.obj C:\Dev\DOS-ENGINE\src\text_input.o&
+bj C:\Dev\DOS-ENGINE\src\text_output.obj C:\Dev\DOS-ENGINE\src\timer.obj C:\&
+Dev\DOS-ENGINE\src\_bit_reverse.h C:\Dev\DOS-ENGINE\src\_bits.h C:\Dev\DOS-E&
+NGINE\src\_common.h C:\Dev\DOS-ENGINE\src\_debug.h C:\Dev\DOS-ENGINE\src\_dp&
+mi.h C:\Dev\DOS-ENGINE\src\_macro.h C:\Dev\DOS-ENGINE\src\_malloc.h C:\Dev\D&
+OS-ENGINE\src\_status.h C:\Dev\DOS-ENGINE\src\_string.h C:\Dev\DOS-ENGINE\sr&
+c\_types.h C:\Dev\DOS-ENGINE\src\_watcom.h C:\Dev\DOS-ENGINE\src\action.h C:&
+\Dev\DOS-ENGINE\src\action_defines.h C:\Dev\DOS-ENGINE\src\action_structs.h &
+C:\Dev\DOS-ENGINE\src\command.h C:\Dev\DOS-ENGINE\src\command_defines.h C:\D&
+ev\DOS-ENGINE\src\command_structs.h C:\Dev\DOS-ENGINE\src\commands_game.h C:&
+\Dev\DOS-ENGINE\src\commands_system.h C:\Dev\DOS-ENGINE\src\commands_timer.h&
+ C:\Dev\DOS-ENGINE\src\console.h C:\Dev\DOS-ENGINE\src\game.h C:\Dev\DOS-ENG&
+INE\src\game_defines.h C:\Dev\DOS-ENGINE\src\game_pause.h C:\Dev\DOS-ENGINE\&
+src\game_physics.h C:\Dev\DOS-ENGINE\src\game_structs.h C:\Dev\DOS-ENGINE\sr&
+c\gfx_bitmap.h C:\Dev\DOS-ENGINE\src\gfx_colors.h C:\Dev\DOS-ENGINE\src\gfx_&
+draw.h C:\Dev\DOS-ENGINE\src\gfx_draw_defines.h C:\Dev\DOS-ENGINE\src\gfx_dr&
+aw_inline.h C:\Dev\DOS-ENGINE\src\gfx_draw_structs.h C:\Dev\DOS-ENGINE\src\g&
+fx_draw_text.h C:\Dev\DOS-ENGINE\src\gfx_font.h C:\Dev\DOS-ENGINE\src\gfx_pa&
+lette.h C:\Dev\DOS-ENGINE\src\gfx_palette_structs.h C:\Dev\DOS-ENGINE\src\gf&
+x_poly.h C:\Dev\DOS-ENGINE\src\gfx_video.h C:\Dev\DOS-ENGINE\src\gfx_video_d&
+efines.h C:\Dev\DOS-ENGINE\src\gfx_video_structs.h C:\Dev\DOS-ENGINE\src\inp&
+ut.h C:\Dev\DOS-ENGINE\src\input_defines.h C:\Dev\DOS-ENGINE\src\input_keys.&
+h C:\Dev\DOS-ENGINE\src\input_structs.h C:\Dev\DOS-ENGINE\src\main.h C:\Dev\&
+DOS-ENGINE\src\math_fixp.h C:\Dev\DOS-ENGINE\src\math_fixp_defines.h C:\Dev\&
+DOS-ENGINE\src\math_fixp_inline.h C:\Dev\DOS-ENGINE\src\math_fixp_structs.h &
+C:\Dev\DOS-ENGINE\src\menu.h C:\Dev\DOS-ENGINE\src\state.h C:\Dev\DOS-ENGINE&
+\src\state_defines.h C:\Dev\DOS-ENGINE\src\state_structs.h C:\Dev\DOS-ENGINE&
+\src\system.h C:\Dev\DOS-ENGINE\src\system_defines.h C:\Dev\DOS-ENGINE\src\s&
+ystem_init.h C:\Dev\DOS-ENGINE\src\system_structs.h C:\Dev\DOS-ENGINE\src\te&
+xt_defines.h C:\Dev\DOS-ENGINE\src\text_input.h C:\Dev\DOS-ENGINE\src\text_o&
+utput.h C:\Dev\DOS-ENGINE\src\text_structs.h C:\Dev\DOS-ENGINE\src\timer.h C&
+:\Dev\DOS-ENGINE\src\timer_defines.h C:\Dev\DOS-ENGINE\src\timer_structs.h .&
+AUTODEPEND
+ @C:
+ cd C:\Dev\DOS-ENGINE\src
+ @%write engine.lk1 FIL _bit_reverse.obj,_debug.obj,_dpmi.obj,_status.obj,_s&
+tring.obj,action.obj,audio.obj,command.obj,commands_game.obj,commands_system&
+.obj,commands_timer.obj,console.obj,game.obj,game_pause.obj,game_physics.obj&
+,gfx_bitmap.obj,gfx_draw.obj,gfx_draw_game.obj,gfx_draw_text.obj,gfx_palette&
+.obj,gfx_poly.obj,gfx_video.obj,input.obj,input_keys.obj,main.obj,math_fixp.&
+obj,math_fixp_tables.obj,menu.obj,state.obj,system.obj,text_input.obj,text_o&
+utput.obj,timer.obj
+ @%append engine.lk1 
+ *wlink name engine d all sys dos4g op m op maxe=25 op q op symf @engine.lk1
+

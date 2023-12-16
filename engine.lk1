@@ -1,0 +1,2 @@
+FIL _bit_reverse.obj,_debug.obj,_dpmi.obj,_status.obj,_string.obj,action.obj,audio.obj,command.obj,commands_game.obj,commands_system.obj,commands_timer.obj,console.obj,game.obj,game_pause.obj,game_physics.obj,gfx_bitmap.obj,gfx_draw.obj,gfx_draw_game.obj,gfx_draw_text.obj,gfx_palette.obj,gfx_poly.obj,gfx_video.obj,input.obj,input_keys.obj,main.obj,math_fixp.obj,math_fixp_tables.obj,menu.obj,state.obj,system.obj,text_input.obj,text_output.obj,timer.obj
+
